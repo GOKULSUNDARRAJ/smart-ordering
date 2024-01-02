@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/common_google_play_services_enable_button"
+        android:textStyle="bold"
+        android:textSize="10sp"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="true"
+        android:textAlignment="center"
+        ></TextView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:src="@color/white"
+        android:defaultFocusHighlightEnabled="true"
+        android:foregroundGravity="center"
+        android:layout_marginTop="@dimen/text_size_small"
+        android:keepScreenOn="true"
+        android:id="@+id/idtxt"
+        android:layout_marginRight="@dimen/text_size_small"
+        android:keyboardNavigationCluster="true"
+        android:foregroundTintMode="add"
+        android:requiresFadingEdge="vertical"
+        ></ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fadeScrollbars="true"
+        android:defaultFocusHighlightEnabled="true"
+        android:height="@dimen/text_size_small"
+        android:gravity="center"
+        android:hapticFeedbackEnabled="true"
+        android:drawableTop="@color/white"
+        android:keyboardNavigationCluster="true"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        android:width="@dimen/text_size_small"
+        android:requiresFadingEdge="vertical"
+        android:layout_marginLeft="@dimen/text_size_small"
+        android:nestedScrollingEnabled="true"
+        android:layout_margin="@dimen/text_size_small"
+        android:padding="@dimen/text_size_small"
+        android:id="@+id/rthhn"/>
+
+
+    <androidx.constraintlayout.utils.widget.ImageFilterButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:defaultFocusHighlightEnabled="true"
+        android:requiresFadingEdge="vertical"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        android:layout_margin="@dimen/text_size_small"
+        android:padding="@dimen/text_size_small"
+        android:elevation="@dimen/text_size_small"
+        android:fadeScrollbars="true"
+        android:layout_alignWithParentIfMissing="true"
+        android:scrollbarDefaultDelayBeforeFade="@android:integer/config_longAnimTime"
+        ></androidx.constraintlayout.utils.widget.ImageFilterButton>
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbarDefaultDelayBeforeFade="@android:integer/config_longAnimTime"
+        android:id="@+id/ihsdg"
+        android:padding="24dp"
+        android:paddingBottom="@android:dimen/app_icon_size"
+        android:paddingLeft="@android:dimen/app_icon_size"/>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageViewAddProduct"
+            android:outlineAmbientShadowColor="@android:color/transparent"
+            android:importantForAccessibility="@android:integer/config_longAnimTime"
+            android:scrollbarDefaultDelayBeforeFade="@android:integer/config_longAnimTime"
+            ></ImageView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:elevation="@android:dimen/app_icon_size"
+            android:importantForAccessibility="@android:integer/config_longAnimTime"
+            android:layout_toEndOf="@+id/imageViewAddProduct"
+            android:layout_below="@+id/imageViewAddProduct"></LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
+
+

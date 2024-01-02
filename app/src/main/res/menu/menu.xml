@@ -1,0 +1,75 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/item1"
+        android:title="All"
+        app:actionLayout="@layout/menu_item_layout" />
+    <item
+        android:id="@+id/item2"
+        android:title="ACCESSORIES"
+        app:actionLayout="@layout/menu_item_layout" />
+
+    <item
+        android:id="@+id/item3"
+        android:title="ALCOHOL"
+        app:actionLayout="@layout/menu_item_layout" />
+    <item
+        android:id="@+id/item4"
+        android:title="BAG"
+        app:actionLayout="@layout/menu_item_layout" />
+    <item
+        android:id="@+id/item5"
+        android:title="BAKERY"
+        app:actionLayout="@layout/menu_item_layout" />
+    <item
+        android:id="@+id/item6"
+        android:title="BAKES"
+        app:actionLayout="@layout/menu_item_layout" />
+    <item
+        android:id="@+id/item7"
+        android:title="BISCUITS"
+        app:actionLayout="@layout/menu_item_layout" />
+    <item
+        android:id="@+id/item8"
+        android:title="BREADING FLOUR"
+        app:actionLayout="@layout/menu_item_layout" />
+    <item
+        android:id="@+id/item9"
+        android:title="CATERING MATERIAL"
+        app:actionLayout="@layout/menu_item_layout" />
+    <item
+        android:id="@+id/item10"
+        android:title="CHILLED FOOD"
+        app:actionLayout="@layout/menu_item_layout" />
+    <item
+        android:id="@+id/item11"
+        android:title="CHUTNEY PICKLES"
+        app:actionLayout="@layout/menu_item_layout" />
+    <item
+        android:id="@+id/item12"
+        android:title="CLEANIG MATERIAL"
+        app:actionLayout="@layout/menu_item_layout" />
+    <item
+        android:id="@+id/item13"
+        android:title="COFFEE"
+        app:actionLayout="@layout/menu_item_layout" />
+    <item
+        android:id="@+id/item14"
+        android:title="CONFECTIONERY"
+        app:actionLayout="@layout/menu_item_layout" />
+    <item
+        android:id="@+id/item15"
+        android:title="CONTAINERS LIDS"
+        app:actionLayout="@layout/menu_item_layout" />
+    <item
+        android:id="@+id/item16"
+        android:title="DAIRY"
+        app:actionLayout="@layout/menu_item_layout" />
+
+
+</menu>
+
+
+

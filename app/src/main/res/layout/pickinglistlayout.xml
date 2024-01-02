@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/imageViewProduct"
+        android:layout_width="55dp"
+        android:scaleType="fitXY"
+        android:layout_height="55dp"
+        android:background="@drawable/imgback"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewProductTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Niru roasted red rice flour "
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/imageViewProduct"
+        app:layout_constraintTop_toTopOf="@id/imageViewProduct" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewProductCountAndPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="(Canada)"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/textViewProductTitle"
+        app:layout_constraintTop_toBottomOf="@id/textViewProductTitle" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView"
+        android:layout_width="47dp"
+        android:layout_height="22dp"
+        android:text="£1.99"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout4"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout4" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewTST"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@color/Textgray"
+        android:text="Packsize x 20"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageViewProduct" />
+
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="65dp"
+        android:layout_height="30dp"
+        android:background="@drawable/blueline"
+        android:drawableLeft="@drawable/baseline_edit_24"
+        android:padding="5dp"
+        android:text="Edit"
+        android:textAllCaps="false"
+        android:textColor="@color/Textblue"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout4"></Button>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="105dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/btngreen"
+        android:drawableLeft="@drawable/baseline_check_24"
+        android:padding="3dp"
+        android:text="CONNECTED"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTST"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewTST"></Button>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewProductCountAndPrice"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewProductCountAndPrice"
+        app:layout_constraintTop_toBottomOf="@+id/textViewProductCountAndPrice">
+
+        <ImageView
+            android:id="@+id/imageViewAddProduct"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/grayminus" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="2"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageViewRemoveProduct"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="3dp"
+            android:src="@drawable/plusblue" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textV"
+        app:layout_constraintTop_toTopOf="@+id/textV">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/iblue" />
+
+        <ImageView
+            android:id="@+id/imageViewRemoveP"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="7dp"
+            android:src="@drawable/iv_remove" />
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Packsize x 20"
+        android:textColor="@color/black"
+        android:background="@drawable/txtback"
+        android:textSize="10dp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTST"
+        app:layout_constraintStart_toStartOf="@+id/textViewTST"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTST" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textVie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Packsize x 20"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        android:background="@color/Textgray"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/textVi"
+        app:layout_constraintStart_toEndOf="@+id/textVi"
+        app:layout_constraintTop_toTopOf="@+id/textVi" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Packsize x 20"
+        android:background="@color/Textgray"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/textVie"
+        app:layout_constraintStart_toEndOf="@+id/textVie"
+        app:layout_constraintTop_toTopOf="@+id/textVie" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textVi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Packsize x 20"
+        android:textColor="@color/black"
+        android:background="@color/Textgray"
+        android:textSize="10dp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewT"
+        app:layout_constraintStart_toEndOf="@+id/textViewT"
+        app:layout_constraintTop_toTopOf="@+id/textViewT" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textVie"></View>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
