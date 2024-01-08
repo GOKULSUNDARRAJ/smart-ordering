@@ -8,6 +8,7 @@
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -19,6 +20,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
+        <activity
+            android:name=".DeliverynotCheckActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DeliveryCheck"
+            android:exported="false" />
+        <activity
+            android:name=".pickingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CollectedActivity"
+            android:exported="false" />
         <activity
             android:name=".Scanbarcode"
             android:exported="false" />
@@ -50,7 +63,7 @@
             android:name=".ScanOrderActivity"
             android:exported="false" />
         <activity
-            android:name=".pickingActivity"
+            android:name=".ProductActivity"
             android:exported="false" />
         <activity
             android:name=".CashActivity"

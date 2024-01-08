@@ -105,6 +105,7 @@ public class ScanAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
 
 
+
             productViewHolder.inc.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

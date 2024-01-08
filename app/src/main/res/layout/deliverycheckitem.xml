@@ -40,7 +40,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/font123"
-                android:text="Household"
+                android:text="Rice,Flour"
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:textStyle="bold"
@@ -79,7 +79,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginRight="10dp"
         android:fontFamily="@font/font123"
-        android:text="MONEY TIN ENDANGERED SPECIES 145mm X 110mm"
+        android:text="Niru Millet (Kurakkan) flour"
         android:textColor="@color/black"
         android:textSize="@dimen/text_size_small"
         android:textStyle="bold"></TextView>
@@ -110,7 +110,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/font123"
-            android:text="Cash Carry"
+            android:text="Niru,Jay Brand"
             android:textColor="@color/black"
             android:textSize="15dp"
             android:textStyle="bold"
@@ -140,7 +140,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/font123"
-            android:text="Qty:1"
+            android:text="Qty : 2"
             android:textColor="@color/black"
             android:textSize="15dp"
             android:textStyle="bold"
@@ -155,95 +155,6 @@
         android:layout_height="5dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/dotedline" />
-
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="10dp"
-        android:fontFamily="@font/font123"
-        android:text="MONEY TIN ENDANGERED SPECIES 145mm X 110mm"
-        android:textColor="@color/black"
-        android:textSize="@dimen/text_size_small"
-        android:textStyle="bold"></TextView>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/textjhg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/font123"
-            android:gravity="end"
-            android:text="£10.44"
-            android:textColor="@color/blue"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"></TextView>
-
-        <TextView
-            android:id="@+id/textj12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/font123"
-            android:text="Cash Carry"
-            android:textColor="@color/black"
-            android:textSize="15dp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"></TextView>
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_height="wrap_content">
-
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/icon"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"></ImageView>
-
-        <TextView
-            android:id="@+id/text134"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/font123"
-            android:text="Qty:1"
-            android:textColor="@color/black"
-            android:textSize="15dp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/imageView3" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/dotedline"/>
-
-
 
 
 

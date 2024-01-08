@@ -54,7 +54,6 @@ public class ScanOrderActivity extends AppCompatActivity {
 
 
     public void gotocamerascan(View view) {
-
         Intent intent = new Intent(ScanOrderActivity.this, CamerascanActivity.class);
         startActivity(intent);
     }

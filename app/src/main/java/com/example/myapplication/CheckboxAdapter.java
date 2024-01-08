@@ -9,8 +9,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
-public class CheckboxAdapter extends RecyclerView.Adapter<CheckboxAdapter.ViewHolder> {
 
+public class CheckboxAdapter extends RecyclerView.Adapter<CheckboxAdapter.ViewHolder> {
     private List<String> itemList;
 
     public CheckboxAdapter(List<String> itemList) {
@@ -29,8 +29,6 @@ public class CheckboxAdapter extends RecyclerView.Adapter<CheckboxAdapter.ViewHo
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         String item = itemList.get(position);
         holder.checkBox.setText(item);
-
-
     }
 
     @Override

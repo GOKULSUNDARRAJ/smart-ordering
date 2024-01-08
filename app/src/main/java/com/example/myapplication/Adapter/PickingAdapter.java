@@ -21,6 +21,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.myapplication.Colllecteditem;
 import com.example.myapplication.CustomDialogClass;
 import com.example.myapplication.Model.Picking;
+import com.example.myapplication.ProductActivity;
 import com.example.myapplication.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -60,6 +61,13 @@ public class PickingAdapter extends RecyclerView.Adapter<PickingAdapter.PickingV
         holder.textViewProductCountAndPrice.setText(product.getCountAndPrice());
 
 
+        holder.item.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(v.getContext(), ProductActivity.class);
+                v.getContext().startActivity(intent);
+            }
+        });
         holder.inc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -202,6 +210,7 @@ public class PickingAdapter extends RecyclerView.Adapter<PickingAdapter.PickingV
 
         EditText productsearch;
 
+        androidx.constraintlayout.widget.ConstraintLayout item;
 
 
         public PickingViewHolder(@NonNull View itemView) {
@@ -216,6 +225,7 @@ public class PickingAdapter extends RecyclerView.Adapter<PickingAdapter.PickingV
             showDialogButton = itemView.findViewById(R.id.button3);
             productsearch = itemView.findViewById(R.id.productsearch);
             collected=itemView.findViewById(R.id.showDialogButton);
+            item=itemView.findViewById(R.id.item);
 
         }
 

@@ -46,6 +46,7 @@ public class pickingActivity extends AppCompatActivity {
     private Button collect;
 
 
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +58,7 @@ public class pickingActivity extends AppCompatActivity {
         collect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), Scanbarcode.class);
+                Intent intent = new Intent(v.getContext(), DeliverynotCheckActivity.class);
                 startActivity(intent);
             }
         });
@@ -170,6 +171,7 @@ public class pickingActivity extends AppCompatActivity {
     public void gotoback(View view) {
         Intent intent = new Intent(pickingActivity.this, MainActivity.class);
         startActivity(intent);
+        finish();
     }
 
     private void filterRecyclerView(String searchText) {
