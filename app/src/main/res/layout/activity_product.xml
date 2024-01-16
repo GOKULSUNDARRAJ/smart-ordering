@@ -105,7 +105,7 @@
                 android:layout_marginStart="20dp"
                 android:fontFamily="@font/font123"
                 android:text="Code : FKUP10"
-                android:textColor="@color/gray"
+                android:textColor="@color/lightblack"
                 android:textSize="@dimen/text_size_small"
                 android:textStyle="bold"></TextView>
 
@@ -118,7 +118,7 @@
                 android:fontFamily="@font/font123"
                 android:gravity="end"
                 android:text="DD PlusPoints : 100"
-                android:textColor="@color/gray"
+                android:textColor="@color/lightblack"
                 android:textSize="@dimen/text_size_small"
                 android:textStyle="bold"></TextView>
 
@@ -138,7 +138,7 @@
                 android:layout_marginStart="20dp"
                 android:fontFamily="@font/font123"
                 android:text="Brand : Niru"
-                android:textColor="@color/gray"
+                android:textColor="@color/lightblack"
                 android:textSize="@dimen/text_size_small"
                 android:textStyle="bold"></TextView>
 
@@ -191,7 +191,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/font123"
                     android:text="Pack Size : 12"
-                    android:textColor="@color/gray"
+                    android:textColor="@color/lightblack"
                     android:textSize="18dp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -217,7 +217,7 @@
                 android:layout_marginStart="20dp"
                 android:fontFamily="@font/font123"
                 android:text="Unit Weigth : 500g"
-                android:textColor="@color/gray"
+                android:textColor="@color/lightblack"
                 android:textSize="@dimen/text_size_small"
                 android:textStyle="bold"></TextView>
 
@@ -230,7 +230,7 @@
                 android:fontFamily="@font/font123"
                 android:gravity="end"
                 android:text="Unit Price : £35.40"
-                android:textColor="@color/gray"
+                android:textColor="@color/lightblack"
                 android:textSize="@dimen/text_size_small"
                 android:textStyle="bold"></TextView>
 
@@ -276,7 +276,7 @@
                     android:layout_marginEnd="4dp"
                     android:fontFamily="@font/font123"
                     android:text="Quantity"
-                    android:textColor="@color/gray"
+                    android:textColor="@color/lightblack"
                     android:textSize="18dp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
@@ -415,7 +415,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/font123"
                 android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore"
-                android:textColor="@color/gray"
+                android:textColor="@color/lightblack"
                 android:textSize="@dimen/text_size_small"
                 android:textStyle="bold"></TextView>
 

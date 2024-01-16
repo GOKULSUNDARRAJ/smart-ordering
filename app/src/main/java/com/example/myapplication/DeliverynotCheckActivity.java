@@ -49,7 +49,7 @@ public class DeliverynotCheckActivity extends AppCompatActivity {
         List<ItemClassDelivery> itemClasses = new ArrayList<>();
 
 
-        itemClasses.add(new ItemClassDelivery(ItemClassDelivery.LayoutOneDelivery, "Rice,Flour"));
+        itemClasses.add(new ItemClassDelivery(ItemClassDelivery.LayoutOneDelivery, "Rice , Flour"));
 
         itemClasses.add(new ItemClassDelivery(
                 ItemClassDelivery.LayoutTwoDelivery, R.color.white,
@@ -97,7 +97,7 @@ public class DeliverynotCheckActivity extends AppCompatActivity {
         itemClasses.add(new ItemClassDelivery(
                 ItemClassDelivery.LayoutTwoDelivery, R.color.white,
                 "Niru millet (Kurankkan) flour", "Niru,Jay Brand"));
-        itemClasses.add(new ItemClassDelivery(ItemClassDelivery.LayoutOneDelivery, "Rice,Flour"));
+        itemClasses.add(new ItemClassDelivery(ItemClassDelivery.LayoutOneDelivery, "Rice , Flour"));
 
         itemClasses.add(new ItemClassDelivery(
                 ItemClassDelivery.LayoutTwoDelivery, R.color.white,
@@ -118,6 +118,11 @@ public class DeliverynotCheckActivity extends AppCompatActivity {
 
         recyclerView.setAdapter(adapterClassDelivery);
 
+    }
+
+    public void goback1(View view) {
+        Intent intent=new Intent(view.getContext(),pickingActivity.class);
+        startActivity(intent);
     }
 }
 

@@ -47,14 +47,54 @@
 
 
     </LinearLayout>
-
-    <ScrollView
+    <LinearLayout
+        android:id="@+id/item10"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
 
+        >
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bar"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                ></ImageView>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/item1"
+        android:onClick="gotoscan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="gotoscan"
             android:orientation="vertical">
 
 
@@ -63,11 +103,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Product Name"
-                android:layout_marginTop="50dp"
                 android:textColor="@color/black"
+                android:layout_marginTop="5dp"
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/font123"
-               ></TextView>
+                ></TextView>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/productedit"
@@ -77,7 +117,7 @@
                 android:paddingBottom="10dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
-               >
+                >
 
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -94,12 +134,37 @@
 
 
 
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item2"
+        android:onClick="gotoscan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="gotoscan"
+            android:orientation="vertical">
+
+
+
             <TextView
                 android:id="@+id/productdectitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Product description"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:textColor="@color/black"
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/font123"
@@ -108,7 +173,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/productdecedit"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="100dp"
                 android:background="@drawable/edt_bg_blue"
                 android:paddingBottom="10dp"
                 android:layout_marginRight="20dp"
@@ -124,10 +189,32 @@
                     android:layout_marginRight="10dp"
                     android:layout_gravity="start"
                     android:gravity="start"
-                    android:onClick="toastmessage"
                     android:layout_marginLeft="10dp"/>
 
             </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item3"
+        android:onClick="gotoscan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="gotoscan"
+            android:orientation="vertical">
+
+
 
 
             <TextView
@@ -135,7 +222,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Select Category"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:textColor="@color/black"
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/font123"
@@ -150,12 +237,33 @@
                 android:background="@drawable/spinner_background_blue" />
 
 
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item4"
+        android:onClick="gotoscan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="gotoscan"
+            android:orientation="vertical">
+
             <TextView
                 android:id="@+id/product"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Product Price"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:textColor="@color/black"
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/font123"
@@ -169,13 +277,13 @@
                 android:paddingBottom="10dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
-                >
+                tools:ignore="DuplicateIds">
 
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/proprice"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:background="@color/lightblue"
                     android:layout_marginRight="10dp"
                     android:inputType="number"
@@ -186,12 +294,40 @@
 
 
 
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/item5"
+        android:onClick="gotoscan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="gotoscan"
+            android:orientation="vertical">
+
+
+
+
             <TextView
                 android:id="@+id/productweight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Weight"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:textColor="@color/black"
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/font123"
@@ -205,7 +341,7 @@
                 android:paddingBottom="10dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
-               >
+                tools:ignore="DuplicateIds">
 
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -221,12 +357,35 @@
 
 
 
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item6"
+        android:onClick="gotoscan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="gotoscan"
+            android:orientation="vertical">
+
             <TextView
                 android:id="@+id/productsize"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Pack Size"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:textColor="@color/black"
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/font123"
@@ -240,7 +399,7 @@
                 android:paddingBottom="10dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
-             >
+                tools:ignore="DuplicateIds">
 
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -256,12 +415,36 @@
 
 
 
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item7"
+        android:onClick="gotoscan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="gotoscan"
+            android:orientation="vertical">
+
             <TextView
                 android:id="@+id/productvariable"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Variable"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:textColor="@color/black"
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/font123"
@@ -275,7 +458,7 @@
                 android:paddingBottom="10dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
-                >
+                tools:ignore="DuplicateIds">
 
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -289,12 +472,36 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item8"
+        android:onClick="gotoscan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="gotoscan"
+            android:orientation="vertical">
+
+
+
             <TextView
                 android:id="@+id/productimage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Image"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:textColor="@color/black"
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/font123"
@@ -307,7 +514,7 @@
                 android:layout_height="150dp"
                 android:background="@drawable/add"
                 android:scaleType="centerCrop"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginBottom="10dp"
@@ -315,11 +522,33 @@
                 />
 
 
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item9"
+        android:onClick="gotoscan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="gotoscan"
+            android:orientation="vertical">
+
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:onClick="toastmessage"
                 android:layout_marginBottom="10dp"
                 android:layout_height="match_parent">
 
@@ -361,11 +590,10 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+
+
         </LinearLayout>
 
-
-    </ScrollView>
-
-
+    </LinearLayout>
 </LinearLayout>
 

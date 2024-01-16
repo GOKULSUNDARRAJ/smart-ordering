@@ -65,3 +65,4 @@ public class DeliveryChechAdapter extends RecyclerView.Adapter<DeliveryChechAdap
         }
     }
 }
+

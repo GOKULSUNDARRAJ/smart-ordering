@@ -27,8 +27,8 @@
                 android:id="@+id/imageViewProduct"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-                android:padding="10dp"
                 android:background="@drawable/imgback"
+                android:padding="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -43,13 +43,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
+                    android:fontFamily="@font/font123"
+                    android:inputType="number"
                     android:text="Pelex Kids 3D band Watch PLX-046"
                     android:textColor="@color/black"
-                    android:fontFamily="@font/font123"
                     android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:inputType="number"
-                     />
+                    android:textStyle="bold" />
 
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -58,18 +57,22 @@
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/textViewProductCountAndPrice"
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:layout_marginLeft="5dp"
                         android:fontFamily="@font/font123"
                         android:gravity="center_vertical"
                         android:text="1 X £1.90"
                         android:textColor="@color/black"
-                        android:textSize="20dp"
+                        android:textSize="20sp"
                         android:textStyle="bold"
+                        app:autoSizeMaxTextSize="20sp"
+                        app:autoSizeMinTextSize="8sp"
+                        app:autoSizeTextType="uniform"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
+
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="wrap_content"
@@ -108,10 +111,10 @@
                             android:backgroundTint="@color/white"
                             android:fontFamily="@font/font123"
                             android:gravity="center"
+                            android:inputType="number"
                             android:maxLength="3"
                             android:text="1"
                             android:textColor="@color/black"
-                            android:inputType="number"
                             android:textSize="20sp"
                             android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -149,7 +152,6 @@
         </LinearLayout>
 
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -163,15 +165,14 @@
                 android:layout_marginEnd="15dp"
                 android:background="@drawable/txtback"
                 android:fontFamily="@font/font123"
-                android:text="Rodrigz TST"
                 android:paddingLeft="6dp"
                 android:paddingTop="4dp"
                 android:paddingRight="6dp"
                 android:paddingBottom="4dp"
+                android:text="Rodrigz TST"
                 android:textColor="@color/blue"
                 android:textSize="12sp"
-                android:textStyle="normal"
-                />
+                android:textStyle="normal" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/textViewType"
@@ -180,31 +181,28 @@
                 android:layout_marginStart="5dp"
                 android:background="@drawable/txtback"
                 android:fontFamily="@font/font123"
-                android:text="watches"
-                android:textColor="@color/black"
-                android:textSize="12sp"
                 android:paddingLeft="6dp"
                 android:paddingTop="4dp"
                 android:paddingRight="6dp"
                 android:paddingBottom="4dp"
-                android:textStyle="normal"
-                />
+                android:text="watches"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="normal" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/textViewSize"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pack Size 1"
-                android:gravity="center_vertical|end"
                 android:layout_weight="1"
+                android:fontFamily="@font/font123"
+                android:gravity="center_vertical|end"
+                android:text="Pack Size 1"
                 android:textColor="@color/black"
                 android:textSize="12sp"
-                android:fontFamily="@font/font123"
-                android:textStyle="normal"
-                />
+                android:textStyle="normal" />
 
         </LinearLayout>
-
 
 
         <LinearLayout
@@ -221,7 +219,6 @@
         </LinearLayout>
 
     </LinearLayout>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

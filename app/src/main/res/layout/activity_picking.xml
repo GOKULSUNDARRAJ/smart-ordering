@@ -162,6 +162,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/subtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -186,8 +187,8 @@
             android:paddingBottom="5dp" />
 
 
-
     </LinearLayout>
+
 
 
     <com.google.android.material.navigation.NavigationView
@@ -198,7 +199,27 @@
         app:headerLayout="@layout/nav_header"
         app:menu="@menu/menu" />
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/emptyListText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/newcart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </androidx.drawerlayout.widget.DrawerLayout>
+
 
 
 

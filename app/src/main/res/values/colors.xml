@@ -13,7 +13,6 @@
     <color name="gray">#9A9996</color>
     <color name="graytin">#CEE4E4E3</color>
     <color name="Textblue">#2682c5</color>
-
     <color name="Textgray">#eeeff2</color>
     <color name="scangray">#797979</color>
     <color name="tabgray">#f4f5f7</color>
@@ -28,21 +27,6 @@
     <color name="newgray">#858b91</color>
     <color name="purple1">#5f259e</color>
     <color name="black1">#2f2b2c</color>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <color name="lightblack">#323232</color>
+    <color name="greenyellow">#87F606</color>
 </resources>

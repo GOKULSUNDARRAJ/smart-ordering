@@ -23,9 +23,14 @@ public class ItemClassDelivery {
 
 
 
-    public String getText() { return text; }
+    public String getText() {
+        return text;
+    }
 
-    public void setText(String text) { this.text = text; }
+
+    public void setText(String text) {
+        this.text = text;
+    }
 
 
     private int icon;
@@ -68,3 +73,10 @@ public class ItemClassDelivery {
         this.viewType = viewType;
     }
 }
+
+
+
+
+
+
+

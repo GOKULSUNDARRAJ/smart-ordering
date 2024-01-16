@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -17,7 +18,7 @@ import android.widget.TextView;
 
 public class ProductActivity extends AppCompatActivity {
 
-    ImageView inc,dec;
+    ImageView inc,dec,goback;
     EditText count;
     androidx.cardview.widget.CardView addbarcode;
     @SuppressLint("MissingInflatedId")
@@ -30,6 +31,16 @@ public class ProductActivity extends AppCompatActivity {
         inc=findViewById(R.id.inc);
         dec=findViewById(R.id.dec);
         count=findViewById(R.id.txt);
+        goback=findViewById(R.id.goback);
+
+        goback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(v.getContext(),pickingActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         addbarcode.setOnClickListener(new View.OnClickListener() {
             @Override

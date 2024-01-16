@@ -28,6 +28,8 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
 public class PickingAdapter extends RecyclerView.Adapter<PickingAdapter.PickingViewHolder> {
     private Context context;
     private List<Picking> productList;
@@ -257,13 +259,22 @@ public class PickingAdapter extends RecyclerView.Adapter<PickingAdapter.PickingV
     }
 
 
+
     public void filterList(List<Picking> filteredList) {
         productList = filteredList;
         notifyDataSetChanged();
     }
 
+    public void updateData(List<Picking> newDataList) {
+        productList.clear();
+        productList.addAll(newDataList);
+        notifyDataSetChanged();
+    }
+
+
 
 }
+
 
 
 

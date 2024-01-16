@@ -43,7 +43,6 @@ public class AdapterClass extends RecyclerView.Adapter {
     }
 
 
-
     class LayoutOneViewHolder
             extends RecyclerView.ViewHolder {
 
@@ -63,7 +62,10 @@ public class AdapterClass extends RecyclerView.Adapter {
 
             textview.setText(text);
         }
+
+
     }
+
 
 
     class LayoutTwoViewHolder
@@ -91,7 +93,6 @@ public class AdapterClass extends RecyclerView.Adapter {
     }
 
 
-
     @NonNull
     @Override
     public RecyclerView.ViewHolder
@@ -116,7 +117,6 @@ public class AdapterClass extends RecyclerView.Adapter {
     }
 
 
-
     @Override
     public void onBindViewHolder(
             @NonNull RecyclerView.ViewHolder holder,
@@ -128,6 +128,7 @@ public class AdapterClass extends RecyclerView.Adapter {
                 String text
                         = itemClassList.get(position).getText();
                 ((LayoutOneViewHolder) holder).setView(text);
+
 
 
                 ((LayoutOneViewHolder) holder)
@@ -176,7 +177,6 @@ public class AdapterClass extends RecyclerView.Adapter {
                 return;
         }
     }
-
 
 
     @Override

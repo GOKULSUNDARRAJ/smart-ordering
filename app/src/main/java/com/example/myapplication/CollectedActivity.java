@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Adapter;
 
 import com.example.myapplication.Adapter.AdapterClass;
@@ -20,19 +22,18 @@ public class CollectedActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_collected);
 
-        // From the MainActivity, find the RecyclerView.
+
         RecyclerView recyclerView
                 = findViewById(R.id.recyclerView);
 
-        // Create and set the layout manager
-        // For the RecyclerView.
+
         LinearLayoutManager layoutManager
                 = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
         List<ItemClass> itemClasses = new ArrayList<>();
 
-        // pass the arguments
+
         itemClasses.add(new ItemClass(ItemClass.LayoutOne,
                 "Rice,Flour"));
 
@@ -97,7 +98,11 @@ public class CollectedActivity extends AppCompatActivity {
         AdapterClass adapter
                 = new AdapterClass(itemClasses);
 
-        // set the adapter
         recyclerView.setAdapter(adapter);
+    }
+
+    public void goback12(View view) {
+        Intent intent=new Intent(view.getContext(),DeliverynotCheckActivity.class);
+        startActivity(intent);
     }
 }

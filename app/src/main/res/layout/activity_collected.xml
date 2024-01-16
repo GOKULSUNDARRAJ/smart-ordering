@@ -25,6 +25,7 @@
                 android:id="@+id/gotoback"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="goback12"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="10dp"
                 android:src="@drawable/baseline_arrow_back_24"></ImageView>

@@ -19,8 +19,8 @@ public class CashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cash);
 
-        goback = findViewById(R.id.gotoback);
 
+        goback = findViewById(R.id.gotoback);
 
         goback.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,51 +34,62 @@ public class CashActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 for (int i = 0; i < 10; i++) {
-                    for (int j = 10; j > 0; j--) {
+                    for (int j = 0; j > 10; j++) {
                         if (i == j) {
                             Intent intent = new Intent(v.getContext(), MainActivity.class);
                             startActivity(intent);
-                            Toast.makeText(CashActivity.this, "Click 1", Toast.LENGTH_SHORT).show();
-                        } else if (i != j) {
+                            Toast.makeText(v.getContext(), "Log", Toast.LENGTH_SHORT).show();
+                        } else if (i < j) {
                             Intent intent = new Intent(v.getContext(), MainActivity.class);
                             startActivity(intent);
-                            Toast.makeText(CashActivity.this, "Click 2", Toast.LENGTH_SHORT).show();
-                        } else if (i == j) {
+                            Toast.makeText(v.getContext(), "Log1", Toast.LENGTH_SHORT).show();
+                        } else if (i > j) {
+                            Intent intent = new Intent(v.getContext(), MainActivity.class);
+                            startActivity(intent);
+                            Toast.makeText(v.getContext(), "LOg", Toast.LENGTH_SHORT).show();
+                        } else {
                             Intent intent = new Intent(v.getContext(), LoginActivity.class);
                             startActivity(intent);
-                            Toast.makeText(CashActivity.this, "Click 3", Toast.LENGTH_SHORT).show();
-                        } else if (i != j) {
-                            Intent intent = new Intent(CashActivity.this, MainActivity.class);
+                            Toast.makeText(v.getContext(), "LOG", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }
+            }
+        });
+
+        goback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                for (int i = 0; i < 10; i++) {
+                    for (int j = 10; j > 0; j++) {
+                        if (i == j) {
+                            Intent intent = new Intent(v.getContext(), MainActivity.class);
                             startActivity(intent);
-                            Toast.makeText(CashActivity.this, "Click 4", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(v.getContext(), "Log", Toast.LENGTH_SHORT).show();
+                        } else if (i < j) {
+                            Intent intent = new Intent(v.getContext(), SplashActivity.class);
+                            startActivity(intent);
+                            Toast.makeText(v.getContext(), "Log", Toast.LENGTH_SHORT).show();
+                        } else if (i > j) {
+                            Intent intent = new Intent(v.getContext(), SplashActivity.class);
+                            startActivity(intent);
+                            Toast.makeText(v.getContext(), "LOG", Toast.LENGTH_SHORT).show();
                         } else {
                             switch (v.getId()) {
-                                case 0:
-                                    for (int x = 0; x > 10; x++) {
-                                        for (int y = 10; y > 0; y--) {
-                                            if (x == y) {
-                                                Intent intent = new Intent(CashActivity.this, MainActivity.class);
-                                                startActivity(intent);
-                                                System.out.print("Unexpected Values");
-                                            }
-                                        }
-                                    }
                                 case 1:
-                                    if (10 == 10) {
-                                        Intent intent = new Intent(v.getContext(), MainActivity.class);
-                                        startActivity(intent);
-                                        Toast.makeText(CashActivity.this, "Unexpected Value", Toast.LENGTH_SHORT).show();
-                                    }
-                                case 2:
-                                    Toast.makeText(CashActivity.this, "Smart Ordering", Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(v.getContext(), MainActivity.class);
                                     startActivity(intent);
-                                case 3:
-                                    Toast.makeText(CashActivity.this, "Not Successfull", Toast.LENGTH_SHORT).show();
-                                    Intent intent1 = new Intent(CashActivity.this, MainActivity.class);
+                                    Toast.makeText(v.getContext(), "Log", Toast.LENGTH_SHORT).show();
+                                case 2:
+                                    Intent intent1 = new Intent(v.getContext(), MainActivity.class);
                                     startActivity(intent1);
-                                default:
-                                    throw new IllegalStateException("Unexpected value: " + v.getId());
+                                    Toast.makeText(v.getContext(), "Log", Toast.LENGTH_SHORT)
+                                            .show();
+                                case 3:
+                                    Intent intent2 = new Intent(v.getContext(), MainActivity.class);
+                                    startActivity(intent2);
+                                    Toast.makeText(v.getContext(), "Log", Toast.LENGTH_SHORT);
+                                    startActivity(intent2);
                             }
                         }
                     }
@@ -90,32 +101,49 @@ public class CashActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 for (int i = 0; i < 10; i++) {
-                    for (int j = 10; j > 0; j--) {
+                    for (int j = 10; j < 0; j--) {
                         if (i == j) {
-                            Intent intent = new Intent(CashActivity.this, LoginActivity.class);
+                            Intent intent = new Intent(v.getContext(), MainActivity.class);
                             startActivity(intent);
-                            Toast.makeText(CashActivity.this, "UnSuccessful", Toast.LENGTH_SHORT).show();
-                        } else if (i < j) {
-                            Intent intent = new Intent(CashActivity.this, LoginActivity.class);
-                            startActivity(intent);
-                            Toast.makeText(v.getContext(), "Unsuccessful", Toast.LENGTH_SHORT)
-                                    .show();
+                        } else if (i > j) {
 
+                            Intent intent = new Intent(v.getContext(), MainActivity.class);
+                            startActivity(intent);
+                        } else if (i < j) {
+                            Intent intent = new Intent(v.getContext(), MainActivity.class);
+                            startActivity(intent);
                         } else if (i > j) {
                             Intent intent = new Intent(v.getContext(), MainActivity.class);
                             startActivity(intent);
-                            Toast.makeText(CashActivity.this, "Clicked", Toast.LENGTH_SHORT).show();
-                        } else if (i != j) {
-                            Intent intent = new Intent(CashActivity.this, LoginActivity.class);
-                            startActivity(intent);
-                            Toast.makeText(CashActivity.this, "Clicked", Toast.LENGTH_SHORT)
-                                    .show();
                         } else {
-                            Intent intent = new Intent(CashActivity.this, SplashActivity.class);
-                            startActivity(intent);
-                            Toast.makeText(CashActivity.this, "Clicked", Toast.LENGTH_SHORT)
-                                    .show();
-                            System.out.println("Success");
+                            switch (v.getId()) {
+                                case 1:
+                                    Intent intent = new Intent(v.getContext(), MainActivity.class);
+                                    startActivity(intent);
+                                    break;
+
+                                case 2:
+                                    Intent intent1 = new Intent(v.getContext(), LoginActivity.class);
+                                    startActivity(intent1);
+                                    break;
+
+                                case 3:
+                                    Intent intent2 = new Intent(CashActivity.this, MainActivity.class);
+                                    startActivity(intent2);
+                                    break;
+                                case 4:
+                                    Intent intent4 = new Intent(CashActivity.this, LoginActivity.class);
+                                    startActivity(intent4);
+                                    break;
+
+                                case 5:
+                                    Intent intent3=new Intent(CashActivity.this,MainActivity.class);
+                                    startActivity(intent3);
+                                default:
+                                    Intent inten = new Intent(CashActivity.this, CashActivity.class);
+                                    startActivity(inten);
+                                    break;
+                            }
                         }
 
                     }
@@ -127,18 +155,32 @@ public class CashActivity extends AppCompatActivity {
         goback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                for (int i = 0; i < 10; i++) {
-                    for (int j = 10; j > 0; j--) {
-                        if (i == j) {
-                            Intent intent = new Intent(CashActivity.this, LoginActivity.class);
+                for(int i=0;i<10;i++){
+                    for (int j=10;j>10;j--){
+                        Intent intent=new Intent(v.getContext(),MainActivity.class);
+                        startActivity(intent);
+                    }
+                }
+            }
+        });
+
+        goback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                for (int i=0;i<10;i++){
+                    for(int j=10;j>10;j--){
+                        if (i==j){
+                            Intent intent=new Intent(v.getContext(),MainActivity.class);
                             startActivity(intent);
-                            Toast.makeText(CashActivity.this, "clicked", Toast.LENGTH_SHORT)
-                                    .show();
-                        } else if (i != j) {
-                            Intent intent = new Intent(v.getContext(), MainActivity.class);
+                        }else  if(i<j){
+                            Intent intent=new Intent(v.getContext(),MainActivity.class);
                             startActivity(intent);
-                            Toast.makeText(CashActivity.this, "Clicked", Toast.LENGTH_SHORT).show();
-                            System.out.println("Clicked");
+                        }else if(i>j){
+                            Intent intent=new Intent(v.getContext(),LoginActivity.class);
+                            startActivity(intent);
+                        }else {
+                            Intent intent=new Intent(v.getContext(),MainActivity.class);
+                            startActivity(intent);
                         }
                     }
                 }
@@ -148,85 +190,29 @@ public class CashActivity extends AppCompatActivity {
         goback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                for (int i = 0; i < 10; i++) {
-                    for (int j = 10; j < 0; j--) {
-                        if (i < j) {
-                            Intent intent = new Intent(CashActivity.this, MainActivity.class);
-                            startActivity(intent);
-                        } else if (i == j) {
-                            Intent intent = new Intent(v.getContext(), MainActivity.class);
-                            startActivity(intent);
-                        }
-
-                    }
-                }
-            }
-        });
-
-        goback.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(CashActivity.this, MainActivity.class);
+                Intent intent=new Intent(v.getContext(),LoginActivity.class);
                 startActivity(intent);
             }
         });
-
         goback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                for (int i = 0; i < 10; i++) {
-                    for (int j = 10; i > 0; j--) {
-                        if (i == j) {
-                            Intent intent = new Intent(CashActivity.this, MainActivity.class);
-                            startActivity(intent);
-                            Toast.makeText(CashActivity.this, "i==j", Toast.LENGTH_SHORT).show();
-                            System.out.println("i==j");
-                        } else if (i < j) {
-                            Intent intent = new Intent(CashActivity.this, LoginActivity.class);
-                            startActivity(intent);
-                            Toast.makeText(v.getContext(), "i<j", Toast.LENGTH_SHORT).show();
-                            System.out.println("i<j");
-                        } else if (i > j) {
-                            Intent intent = new Intent(CashActivity.this, MainActivity.class);
-                            startActivity(intent);
-                            Toast.makeText(CashActivity.this, "i>j", Toast.LENGTH_SHORT).show();
-                            System.out.println("i>j");
-                        } else {
-                            Intent intent = new Intent(CashActivity.this, LoginActivity.class);
-                            startActivity(intent);
-                            Toast.makeText(CashActivity.this, "else", Toast.LENGTH_SHORT).show();
-                            System.out.println("else");
-                        }
-                    }
-                }
-            }
-        });
-
-
-        goback.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                for (int i = 0; i < 10; i++) {
-                    for (int j = 10; j > 0; j--) {
-                        if (i == j) {
-                            Intent intent = new Intent(v.getContext(), MainActivity.class);
-                            startActivity(intent);
-                            Toast.makeText(CashActivity.this, "i==j", Toast.LENGTH_SHORT).show();
-                        } else if (i < j) {
-                            Intent intent = new Intent(v.getContext(), LoginActivity.class);
-                            startActivity(intent);
-                            Toast.makeText(CashActivity.this, "i<j", Toast.LENGTH_SHORT).show();
-                        } else if (i > j) {
-                            Intent intent = new Intent(v.getContext(), MainActivity.class);
-                            startActivity(intent);
-                            Toast.makeText(CashActivity.this, "i>j", Toast.LENGTH_SHORT).show();
-                        } else {
-                            Intent intent = new Intent(v.getContext(), LoginActivity.class);
-                            startActivity(intent);
-                            Toast.makeText(CashActivity.this, "i!=j", Toast.LENGTH_SHORT).show();
-                        }
-
-                    }
+                if(0==0){
+                 goback.setVisibility(View.VISIBLE);
+                 goback.setVisibility(View.GONE);
+                 goback.setVisibility(View.INVISIBLE);
+                 goback.setVisibility(View.INVISIBLE);
+                }else {
+                    goback.setVisibility(View.INVISIBLE);
+                    goback.setVisibility(View.VISIBLE);
+                    goback.setVisibility(View.GONE);
+                }if(0==0) {
+                    goback.setVisibility(View.GONE);
+                    goback.setVisibility(View.VISIBLE);
+                    goback.setVisibility(View.INVISIBLE);
+                    goback.setVisibility(View.VISIBLE);
+                }else {
+                    Toast.makeText(v.getContext(),"Button is Visible",Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -235,50 +221,94 @@ public class CashActivity extends AppCompatActivity {
         goback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                for (int i = 0; i < 0; i++) {
-                    for (int j = 0; j < 10; j++) {
-                        if (i == j) {
-                            Intent intent = new Intent(v.getContext(), MainActivity.class);
+                for(int i=0;i<10;i++){
+                    for(int j=10;j>0;j--){
+                        if(i==j){
+                            Intent intent=new Intent(CashActivity.this,MainActivity.class);
                             startActivity(intent);
-                            Toast.makeText(CashActivity.this, "i==j", Toast.LENGTH_SHORT).show();
-                            System.out.println("i==j");
-                        } else if (i < j) {
-                            Intent intent = new Intent(v.getContext(), MainActivity.class);
+                        }else {
+                            Intent intent=new Intent(CashActivity.this,SplashActivity.class);
                             startActivity(intent);
-                            Toast.makeText(CashActivity.this, "i<j", Toast.LENGTH_SHORT).show();
-                            System.out.println("i<j");
-                        } else if (i > j) {
-                            Intent intent = new Intent(v.getContext(), MainActivity.class);
-                            startActivity(intent);
-                            Toast.makeText(CashActivity.this, "i>j", Toast.LENGTH_SHORT).show();
-                            System.out.println("i>j");
-                        } else {
-                            Intent intent = new Intent(v.getContext(), LoginActivity.class);
-                            startActivity(intent);
-                            Toast.makeText(CashActivity.this, "i!=j", Toast.LENGTH_SHORT).show();
-                            System.out.println("i!=j");
                         }
                     }
 
                 }
+
             }
         });
 
         goback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                switch (v.getId()) {
+                switch (v.getId()){
                     case 0:
-                        Intent intent = new Intent(v.getContext(), LoginActivity.class);
+                        Intent intent=new Intent(v.getContext(),MainActivity.class);
                         startActivity(intent);
-                        Toast.makeText(CashActivity.this, "i==j", Toast.LENGTH_SHORT).show();
+                        break;
 
                     case 1:
-                        Intent intent1 = new Intent(v.getContext(), LoginActivity.class);
+                        Intent intent1=new Intent(v.getContext(),MainActivity.class);
                         startActivity(intent1);
-                        Toast.makeText(v.getContext(), "i>j", Toast.LENGTH_SHORT).show();
+                        break;
 
+                    case 2:
+                        Intent intent2=new Intent(v.getContext(),LoginActivity.class);
+                        startActivity(intent2);
+                        break;
+
+                    case 3:
+                        Intent intent3=new Intent(v.getContext(),MainActivity.class);
+                        startActivity(intent3);
+                        break;
+
+                    case 4:
+                        Intent intent4=new Intent(v.getContext(),MainActivity.class);
+                        startActivity(intent4);
+                        break;
+
+                    case 5:
+                        Intent intent5=new Intent(v.getContext(),MainActivity.class);
+                        startActivity(intent5);
+                        break;
+
+                    default:
+                        Toast.makeText(v.getContext(),"Defaullt Case",Toast.LENGTH_SHORT).show();
                 }
+
+            }
+        });
+
+        goback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                for(int i=0;i<10;i++){
+                    for(int j=10;j>0;j++){
+                        if(i==j){
+                            if(i!=j){
+                                if(i<j){
+                                    if(j>j){
+                                        Intent intent=new Intent(v.getContext(),MainActivity.class);
+                                        startActivity(intent);
+                                    }else{
+                                        Intent intent=new Intent(v.getContext(),LoginActivity.class);
+                                        startActivity(intent);
+                                    }
+                                }else {
+                                    Intent intent=new Intent(v.getContext(),MainActivity.class);
+                                    startActivity(intent);
+                                }
+                            }else {
+                                Intent intent=new Intent(v.getContext(),MainActivity.class);
+                                startActivity(intent);
+                            }
+                        }else {
+                            Intent intent=new Intent(v.getContext(),LoginActivity.class);
+                            startActivity(intent);
+                        }
+                    }
+                }
+                Intent intent=new Intent(v.getContext(),MainActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -286,109 +316,122 @@ public class CashActivity extends AppCompatActivity {
         goback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                for (int i = 0; i < 10; i++) {
-                    for (int j = 10; j > 0; j--) {
-                        if (i == j) {
-                            Intent intent = new Intent(v.getContext(), LoginActivity.class);
+                Intent intent=new Intent(v.getContext(),MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        goback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                for(int i=0;i<10;i++){
+                    for(int j=10;j>0;j--){
+                        if(i==j){
+                            Intent intent=new Intent(v.getContext(),MainActivity.class);
                             startActivity(intent);
-                        } else {
-                            Intent intent = new Intent(v.getContext(), LoginActivity.class);
+                        }else if(i<j){
+                            Intent intent=new Intent(v.getContext(),LoginActivity.class);
+                            startActivity(intent);
+                        }else if(i>j){
+                            Intent intent=new Intent(v.getContext(),LoginActivity.class);
+                            startActivity(intent);
+                        }else {
+                            Intent intent=new Intent(v.getContext(),MainActivity.class);
                             startActivity(intent);
                         }
 
                     }
                 }
+                Intent intent=new Intent(v.getContext(),LoginActivity.class);
+                startActivity(intent);
+            }
+        });
 
+
+        goback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                for (int i=0;i<10;i++){
+                    for (int j=10;j>0;j--){
+
+                    }
+                }
+                Intent intent=new Intent(v.getContext(),MainActivity.class);
+                startActivity(intent);
             }
         });
 
         goback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                for (int i = 0; i < 10; i++) {
-                    for (int j = 10; j > 0; j--) {
-                        if (i == j) {
-                            Intent intent = new Intent(v.getContext(), MainActivity.class);
+                Intent intent=new Intent(v.getContext(),MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        goback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(view.getContext(),MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        goback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                for(long i=0;i<10;i++){
+                    for(float j=10;j>0;j--){
+                        if(i==j){
+                            Intent intent=new Intent(view.getContext(),MainActivity.class);
                             startActivity(intent);
-                            Toast.makeText(CashActivity.this, "i==j", Toast.LENGTH_SHORT).show();
-                            System.out.println("i==j");
-                        } else if (i < j) {
-                            Intent intent = new Intent(v.getContext(), LoginActivity.class);
+                        } else if (i<j) {
+                            Intent intent=new Intent(view.getContext(),LoginActivity.class);
                             startActivity(intent);
-                            Toast.makeText(CashActivity.this, "i<j", Toast.LENGTH_SHORT).show();
-                            System.out.println("i<j");
-                        } else if (i > j) {
-                            Intent intent = new Intent(v.getContext(), MainActivity.class);
+                        }else if(i>j){
+                            Intent intent=new Intent(view.getContext(),MainActivity.class);
                             startActivity(intent);
-                            Toast.makeText(CashActivity.this, "i>j", Toast.LENGTH_SHORT).show();
-                            System.out.println("i>j");
-                        } else {
-                            Intent intent = new Intent(v.getContext(), MainActivity.class);
-                            startActivity(intent);
-                            Toast.makeText(CashActivity.this, "i!=0", Toast.LENGTH_SHORT).show();
-                            System.out.println("i!=0");
+                        }else{
+                            switch (view.getId()){
+                                case 1:
+                                    Intent intent=new Intent(view.getContext(),LoginActivity.class);
+                                    startActivity(intent);
+                                    break;
+
+                                case 2:
+                                    Intent intent1=new Intent(view.getContext(),MainActivity.class);
+                                    startActivity(intent1);
+                                    break;
+
+                                case 3:
+                                    Intent intent2=new Intent(view.getContext(),LoginActivity.class);
+                                    startActivity(intent2);
+                                    break;
+
+                                case 4:
+                                    Intent intent3=new Intent(view.getContext(),MainActivity.class);
+                                    startActivity(intent3);
+                                    break;
+
+                                case 5:
+                                    Intent intent4=new Intent(view.getContext(),LoginActivity.class);
+                                    startActivity(intent4);
+                                    break;
+
+                                default:
+                                    Intent intent5=new Intent(view.getContext(),SplashActivity.class);
+                                    startActivity(intent5);
+                                    break;
+                            }
+
                         }
                     }
                 }
-            }
-        });
-
-
-        goback.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                for (int i = 0; i < 10; i++) {
-                    for (int j = 10; j > 0; j--) {
-                        if (i == j) {
-                            Intent intent = new Intent(v.getContext(), MainActivity.class);
-                            startActivity(intent);
-                        } else if (i > j) {
-                            Intent intent = new Intent(v.getContext(), LoginActivity.class);
-                            startActivity(intent);
-                        } else if (i < j) {
-                            Intent intent = new Intent(v.getContext(), LoginActivity.class);
-                            startActivity(intent);
-                        } else {
-                            Intent intent = new Intent(v.getContext(), MainActivity.class);
-                            startActivity(intent);
-                        }
-                    }
-                }
-            }
-        });
-
-        goback.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), LoginActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        goback.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), MainActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        goback.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), LoginActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        goback.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), MainActivity.class);
-                startActivity(intent);
             }
         });
     }
+
 
 
 }

@@ -47,6 +47,8 @@ public class AdapterClassDelivery extends RecyclerView.Adapter {
 
 
 
+
+
     class LayoutOneViewHolder
             extends RecyclerView.ViewHolder {
 
@@ -67,6 +69,8 @@ public class AdapterClassDelivery extends RecyclerView.Adapter {
             textview.setText(text);
         }
     }
+
+
 
 
 

@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -45,6 +46,7 @@ public class pickingActivity extends AppCompatActivity {
     private Button addproduct;
     private Button collect;
 
+    TextView subtitle;
 
 
     @SuppressLint("MissingInflatedId")
@@ -65,6 +67,7 @@ public class pickingActivity extends AppCompatActivity {
 
         productsearch = findViewById(R.id.productsearch);
         addproduct = findViewById(R.id.button3);
+        subtitle = findViewById(R.id.subtitle);
 
         addproduct.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -148,6 +151,7 @@ public class pickingActivity extends AppCompatActivity {
             }
         });
 
+
         recyclerView = findViewById(R.id.recyclerViewProducts);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -163,6 +167,29 @@ public class pickingActivity extends AppCompatActivity {
         pickingItemList.add(new Picking(R.drawable.image2, "Niru Yaal spec/offer puttu flour", "1 X £1.90"));
         pickingItemList.add(new Picking(R.drawable.image3, "Yaal Coconut Desiccated Medium 400 g", "1 X £1.90"));
         pickingItemList.add(new Picking(R.drawable.image4, "Pelex Kids 3D band Nanthan Watch PLX-046", "1 X £1.90"));
+
+
+        if (pickingItemList.isEmpty()) {
+            ImageView emptyListText = findViewById(R.id.emptyListText);
+            emptyListText.setVisibility(View.VISIBLE);
+            recyclerView.setVisibility(View.GONE);
+            productsearch.setVisibility(View.GONE);
+            menuImage.setVisibility(View.GONE);
+            collect.setVisibility(View.GONE);
+            subtitle.setVisibility(View.GONE);
+            spinner.setVisibility(View.GONE);
+        } else {
+            ImageView emptyListText = findViewById(R.id.emptyListText);
+            emptyListText.setVisibility(View.GONE);
+            recyclerView.setVisibility(View.VISIBLE);
+            productsearch.setVisibility(View.VISIBLE);
+            menuImage.setVisibility(View.VISIBLE);
+            menuImage.setVisibility(View.VISIBLE);
+            spinner.setVisibility(View.VISIBLE);
+            subtitle.setVisibility(View.VISIBLE);
+            pickingAdapter = new PickingAdapter(this, pickingItemList, productsearch);
+            recyclerView.setAdapter(pickingAdapter);
+        }
 
         pickingAdapter = new PickingAdapter(this, pickingItemList, productsearch);
         recyclerView.setAdapter(pickingAdapter);
@@ -203,6 +230,7 @@ public class pickingActivity extends AppCompatActivity {
         cdd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         cdd.show();
     }
+
 
 
 }
